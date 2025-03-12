@@ -103,7 +103,7 @@ const cubes = [
 
 
 const mtlLoader = new MTLLoader();
-mtlLoader.setPath('resources/');
+mtlLoader.setPath('./');
 mtlLoader.load('lighthouse.mtl', (materials) => {
   materials.preload();  // Preload the materials
 
@@ -119,7 +119,7 @@ mtlLoader.load('lighthouse.mtl', (materials) => {
 
   const objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
-  objLoader.setPath('resources/');
+  objLoader.setPath('./');
   objLoader.load('lighthouse.obj', (object) => {
     object.position.set(4, 0, 6);
     object.scale.set(0.2, 0.2, 0.2); // Scale it down as needed
